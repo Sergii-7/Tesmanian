@@ -9,7 +9,7 @@ async def on_startup(_):
     response = 'Response [200]'
     if login.status_code != 200:
         response = login.status_code
-    sms = f'Bot Tesmanian online\n{Kyiv_time} 💙💛\nlogin to site:\n{response}'
+    sms = f"Bot Tesmanian online\n{Kyiv_time} 💙💛\nlogin to <a href='{user.URL}'>site</a>:\n{response}"
     await bot.send_message(config.channel_id, sms, disable_notification=True)
     #print(sms)
 
